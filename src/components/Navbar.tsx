@@ -6,8 +6,10 @@ type Props = {};
 
 export default function Navbar({}: Props) {
 	return (
-		<nav>
-			<Link href="/">MiniWiki</Link>
+		<nav className="flex flex-row justify-between items-center p-4">
+			<Link href="/" className="text-4xl">
+				MiniWiki
+			</Link>
 			<Search />
 		</nav>
 	);

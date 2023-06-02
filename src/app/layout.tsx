@@ -1,4 +1,4 @@
-import { Navbar } from "@/components";
+import { Navbar, Footer } from "@/components";
 import "./globals.css";
 import { Inter } from "next/font/google";
 
@@ -12,9 +12,16 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 	return (
 		<html lang="en">
-			<body className={inter.className}>
-				<Navbar />
-				{children}
+			<body className={`${inter.className} bg-[#7286D3]`}>
+				<header className="bg-[#595a5c] sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl mx-auto">
+					<Navbar />
+				</header>
+				<main className="bg-[#939498] sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl mx-auto">
+					{children}
+				</main>
+				<footer className="bg-[#6b6d73] sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl mx-auto">
+					<Footer />
+				</footer>
 			</body>
 		</html>
 	);
