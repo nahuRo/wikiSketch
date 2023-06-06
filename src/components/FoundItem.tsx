@@ -18,7 +18,7 @@ type Props = { result: Result };
 export default function FoundItem({ result }: Props) {
 	return (
 		<article className="m-4 max-w-lg">
-			<div className="grid grid-cols-item">
+			<div className="grid grid-cols-item gap-x-4">
 				<div className="flex flex-col justify-center">
 					{result?.thumbnail?.source && (
 						<Image
